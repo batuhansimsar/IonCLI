@@ -1,0 +1,15 @@
+
+version: '3.4'
+
+services:
+  {{ProjectName}}.webapi:
+    image: ${DOCKER_REGISTRY-}{{ProjectName}}.webapi
+    build:
+      context: .
+      dockerfile: src/{{ProjectName}}.WebAPI/Dockerfile
+    ports:
+      - "5000:80"
+      - "5001:443"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80

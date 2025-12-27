@@ -1,0 +1,26 @@
+
+# See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["src/{{ProjectName}}.WebAPI/{{ProjectName}}.WebAPI.csproj", "src/{{ProjectName}}.WebAPI/"]
+COPY ["src/{{ProjectName}}.Application/{{ProjectName}}.Application.csproj", "src/{{ProjectName}}.Application/"]
+COPY ["src/{{ProjectName}}.Domain/{{ProjectName}}.Domain.csproj", "src/{{ProjectName}}.Domain/"]
+COPY ["src/{{ProjectName}}.Infrastructure/{{ProjectName}}.Infrastructure.csproj", "src/{{ProjectName}}.Infrastructure/"]
+RUN dotnet restore "src/{{ProjectName}}.WebAPI/{{ProjectName}}.WebAPI.csproj"
+COPY . .
+WORKDIR "/src/src/{{ProjectName}}.WebAPI"
+RUN dotnet build "{{ProjectName}}.WebAPI.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "{{ProjectName}}.WebAPI.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "{{ProjectName}}.WebAPI.dll"]

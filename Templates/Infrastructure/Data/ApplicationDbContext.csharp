@@ -1,0 +1,16 @@
+
+using Microsoft.EntityFrameworkCore;
+using {{ProjectName}}.Domain.Common;
+using {{ProjectName}}.Application.Common.Interfaces;
+
+namespace {{ProjectName}}.Infrastructure;
+
+public class ApplicationDbContext : DbContext, IApplicationDbContext
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+    }
+}

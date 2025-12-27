@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>IonCLI</id>
+    <version>1.0.0</version>
+    <authors>IonCLI Team</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>A CLI tool for scaffolding Clean Architecture .NET WebAPI solutions.</description>
+    <tags>dotnet-tool clean-architecture webapi scaffold cli</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/yourusername/IonCLI" commit="7cc7adaaa21acda2bb3ed7d3b30676e5f049d246" />
+  </metadata>
+  <files>
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/DotnetToolSettings.xml" target="tools/net8.0/any/DotnetToolSettings.xml" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/IonCLI.dll" target="tools/net8.0/any/IonCLI.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/IonCLI.deps.json" target="tools/net8.0/any/IonCLI.deps.json" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/IonCLI.runtimeconfig.json" target="tools/net8.0/any/IonCLI.runtimeconfig.json" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/IonCLI.pdb" target="tools/net8.0/any/IonCLI.pdb" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/Microsoft.Extensions.DependencyInjection.dll" target="tools/net8.0/any/Microsoft.Extensions.DependencyInjection.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll" target="tools/net8.0/any/Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/Spectre.Console.dll" target="tools/net8.0/any/Spectre.Console.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/System.CommandLine.dll" target="tools/net8.0/any/System.CommandLine.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/cs/System.CommandLine.resources.dll" target="tools/net8.0/any/cs/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/de/System.CommandLine.resources.dll" target="tools/net8.0/any/de/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/es/System.CommandLine.resources.dll" target="tools/net8.0/any/es/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/fr/System.CommandLine.resources.dll" target="tools/net8.0/any/fr/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/it/System.CommandLine.resources.dll" target="tools/net8.0/any/it/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/ja/System.CommandLine.resources.dll" target="tools/net8.0/any/ja/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/ko/System.CommandLine.resources.dll" target="tools/net8.0/any/ko/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/pl/System.CommandLine.resources.dll" target="tools/net8.0/any/pl/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/pt-BR/System.CommandLine.resources.dll" target="tools/net8.0/any/pt-BR/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/ru/System.CommandLine.resources.dll" target="tools/net8.0/any/ru/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/tr/System.CommandLine.resources.dll" target="tools/net8.0/any/tr/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/zh-Hans/System.CommandLine.resources.dll" target="tools/net8.0/any/zh-Hans/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/zh-Hant/System.CommandLine.resources.dll" target="tools/net8.0/any/zh-Hant/System.CommandLine.resources.dll" />
+  </files>
+</package>
