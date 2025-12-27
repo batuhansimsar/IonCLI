@@ -16,9 +16,23 @@ To update to the latest version:
 dotnet tool update -g IonCLI
 ```
 
-## 🚀 Usage
+## 🏁 Quick Start
 
-Once installed, you can use the `ion` command anywhere in your terminal.
+After installation, run this command to verify it works:
+
+```bash
+ion --version
+```
+
+Then create your first project:
+
+```bash
+ion new MyFirstApp
+```
+
+## 🚀 Detailed Usage
+
+You can use the `ion` command anywhere in your terminal.
 
 **Interactive Mode:**
 ```bash
