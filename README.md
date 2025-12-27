@@ -1,60 +1,42 @@
 # IonCLI 🚀
 
-**IonCLI** is a powerful CLI tool for scaffolding modern .NET 8/9 WebAPI solutions that adhere to Clean Architecture principles in seconds.
+**IonCLI** is a powerful CLI tool for scaffolding modern .NET 8/9 WebAPI solutions that adhere to Clean Architecture principles.
 
-## 📦 Installation
+## 📦 How to Run (Source Code)
 
-### Method 1: Automatic
-**Mac/Linux:**
-```bash
-curl -sSL https://raw.githubusercontent.com/batuhansimsar/IonCLI/main/install.sh | bash
-```
+You don't need to install anything globally! Just clone the repository and run it directly.
 
-**Windows (PowerShell):**
-```powershell
-irm https://raw.githubusercontent.com/batuhansimsar/IonCLI/main/install.ps1 | iex
-```
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/batuhansimsar/IonCLI.git
+    cd IonCLI
+    ```
 
-### Method 2: Manual
-Install globally via .NET CLI:
+2.  **Run the Tool**:
+    Run the tool using `dotnet run`. The extra `--` separator is used to pass arguments to the tool itself.
 
-```bash
-dotnet tool install -g IonCLI
-```
+    ```bash
+    dotnet run -- new <ProjectName>
+    ```
 
-If the command `ion` is not found after installation, you may need to add `.dotnet/tools` to your PATH manually.
+    Example:
+    ```bash
+    dotnet run -- new MyAwesomeApp
+    ```
 
-To update to the latest version:
+    With options:
+    ```bash
+    dotnet run -- new QuickApp --defaults
+    ```
 
-```bash
-dotnet tool update -g IonCLI
-```
-
-## 🚀 Usage
-
-To create a new project, navigate to your desired directory and run:
-
-```bash
-ion new <ProjectName>
-```
-
-Example:
-```bash
-ion new MyAwesomeApp
-```
-
-You will be prompted with the following options:
-1.  **.NET Version**: .NET 8 (LTS) or .NET 9.0
-2.  **Database**: PostgreSQL, SQL Server, SQLite, or None (InMemory)
-3.  **Docker Support**: Whether to include Dockerfile and docker-compose files.
+## 🚀 Requirements
+*   [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
+*   Works on **Windows, macOS, and Linux**.
 
 ## ✨ Features
-
-*   **Clean Architecture**: A structure fully compliant with Domain, Application, Infrastructure, and WebAPI layers.
-*   **Dynamic Templates**: Code is automatically adjusted based on your selected database and .NET version.
-*   **Production Ready**: Comes pre-configured with Entity Framework Core, MediatR, FluentValidation, and Swagger.
-*   **Docker Ready**: Ready to launch with a single command (`docker-compose up`).
-*   **Documentation**: Every generated project includes its own `ARCHITECTURE.md` file.
+*   **Clean Architecture Scaffolding**
+*   **Dynamic Templates** (.NET 8/9, Postgres, MSSQL, SQLServer, SQLite)
+*   **Docker Support**
 
 ---
 *Developed by Eşref Batuhan Simsar*
