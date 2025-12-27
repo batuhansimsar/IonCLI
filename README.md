@@ -4,11 +4,15 @@
 
 ## 📦 Installation
 
-### Method 1: Automatic (Recommended for macOS/Linux)
-Download and run the installation script to handle PATH configuration automatically:
-
+### Method 1: Automatic
+**Mac/Linux:**
 ```bash
 curl -sSL https://raw.githubusercontent.com/batuhansimsar/IonCLI/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/batuhansimsar/IonCLI/main/install.ps1 | iex
 ```
 
 ### Method 2: Manual
