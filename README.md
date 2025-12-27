@@ -2,40 +2,51 @@
 
 **IonCLI** is a powerful CLI tool for scaffolding modern .NET 8/9 WebAPI solutions that adhere to Clean Architecture principles.
 
-## 📦 How to Run (Source Code)
+## 📦 Installation
 
-You don't need to install anything globally! Just clone the repository and run it directly.
+Install the tool globally using the standard .NET CLI command:
 
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/batuhansimsar/IonCLI.git
-    cd IonCLI
-    ```
+```bash
+dotnet tool install -g IonCLI
+```
 
-2.  **Run the Tool**:
-    Run the tool using `dotnet run`. The extra `--` separator is used to pass arguments to the tool itself.
+To update to the latest version:
 
-    ```bash
-    dotnet run -- new <ProjectName>
-    ```
+```bash
+dotnet tool update -g IonCLI
+```
 
-    Example:
-    ```bash
-    dotnet run -- new MyAwesomeApp
-    ```
+## 🚀 Usage
 
-    With options:
-    ```bash
-    dotnet run -- new QuickApp --defaults
-    ```
+Once installed, you can use the `ion` command anywhere in your terminal.
 
-## 🚀 Requirements
-*   [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) or later.
-*   Works on **Windows, macOS, and Linux**.
+**Interactive Mode:**
+```bash
+ion new <ProjectName>
+```
+
+**Example:**
+```bash
+ion new MyAwesomeApp
+```
+
+**Non-Interactive (Command flags):**
+```bash
+ion new QuickApp --defaults
+ion new CustomApp --net net9.0 --db SQLite --docker false
+```
+
+## ❓ Troubleshooting
+
+**"Command not found: ion"**
+If you see this error after installation, it means the .NET tools folder is not in your system PATH.
+
+*   **Mac/Linux**: Add `export PATH="$PATH:$HOME/.dotnet/tools"` to your `.zshrc` or `.bash_profile`.
+*   **Windows**: The path `%USERPROFILE%\.dotnet\tools` is usually added automatically. If not, add it to your Environment Variables manually.
 
 ## ✨ Features
 *   **Clean Architecture Scaffolding**
-*   **Dynamic Templates** (.NET 8/9, Postgres, MSSQL, SQLServer, SQLite)
+*   **Dynamic Templates** (.NET 8/9, Postgres, MSSQL, SQLite)
 *   **Docker Support**
 
 ---
