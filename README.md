@@ -1,6 +1,8 @@
 # IonCLI ⚡
 
-**IonCLI** is a minimal CLI tool for scaffolding .NET WebAPI solutions following Clean Architecture principles.
+**IonCLI** is a minimal CLI tool for scaffolding .NET 8/9 WebAPI solutions following Clean Architecture principles.
+
+> **Note:** This tool generates a **template structure only**. You configure your own database, authentication, Docker, and other infrastructure.
 
 ## 📦 Installation
 
@@ -18,13 +20,13 @@ dotnet tool update -g IonCLI
 
 ## 🚀 Quick Start
 
-Create a new project:
+Create a new project with **.NET 8** (default):
 
 ```bash
 ion new MyApp
 ```
 
-With specific .NET version:
+Create a new project with **.NET 9**:
 
 ```bash
 ion new MyApp --net net9.0
@@ -38,8 +40,8 @@ ion new MyApp --defaults
 
 ## ✨ Features
 
-- **Clean Architecture** - Domain, Application, Infrastructure, and WebAPI layers
-- **.NET 8 & 9 Support** - Choose your target framework
+- **Clean Architecture Template** - Domain, Application, Infrastructure, and WebAPI layers
+- **.NET 8 & 9 Support Only** - Choose `net8.0` or `net9.0`
 - **Minimal Setup** - No pre-configured database or Docker, you add what you need
 - **Interactive & Non-Interactive Modes** - Flexible project generation
 
@@ -66,13 +68,30 @@ MyApp/
 
 ## 💡 Philosophy
 
-IonCLI generates a **minimal, opinionated** Clean Architecture structure. You configure your own:
+IonCLI generates a **minimal, opinionated** Clean Architecture template. You configure your own:
 - Database (EF Core, Dapper, MongoDB, etc.)
 - Authentication (JWT, OAuth, etc.)
 - Docker setup
 - Additional services
 
 This gives you complete control over your architecture.
+
+## 📝 Examples
+
+**.NET 8 Project:**
+```bash
+ion new MyNet8App --net net8.0
+```
+
+**.NET 9 Project:**
+```bash
+ion new MyNet9App --net net9.0
+```
+
+**Quick Start (defaults to .NET 8):**
+```bash
+ion new QuickApp --defaults
+```
 
 ## ❓ Troubleshooting
 
