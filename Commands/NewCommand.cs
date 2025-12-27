@@ -26,29 +26,21 @@ public class NewCommand : Command
         var netOption = new Option<string?>("--net", "Target .NET version (net8.0, net9.0)");
         AddOption(netOption);
 
-        var dbOption = new Option<DatabaseType?>("--db", "Database type (PostgreSQL, MSSQL, SQLite, None)");
-        AddOption(dbOption);
-
-        var dockerOption = new Option<bool?>("--docker", "Include Docker support");
-        AddOption(dockerOption);
-
-        this.SetHandler(async (name, useDefaults, net, db, docker) =>
+        this.SetHandler(async (name, useDefaults, net) =>
         {
-            await HandleAsync(name, useDefaults, net, db, docker);
-        }, nameArg, defaultsOption, netOption, dbOption, dockerOption);
+            await HandleAsync(name, useDefaults, net);
+        }, nameArg, defaultsOption, netOption);
     }
 
-    private async Task HandleAsync(string name, bool useDefaults, string? net, DatabaseType? db, bool? docker)
+    private async Task HandleAsync(string name, bool useDefaults, string? net)
     {
         // 1. Gather requirements
-        var config = _console.AskQuestions(name, useDefaults, net, db, docker);
+        var config = _console.AskQuestions(name, useDefaults, net);
 
         // 2. Display summary
         AnsiConsole.MarkupLine("[bold]Configuration:[/]");
         AnsiConsole.MarkupLine($"[grey]- Name:[/] {config.Name}");
-        AnsiConsole.MarkupLine($"[grey]- Database:[/] {config.Database}");
-        AnsiConsole.MarkupLine($"[grey]- Auth:[/] {config.UseAuth}");
-        AnsiConsole.MarkupLine($"[grey]- Docker:[/] {config.UseDocker}");
+        AnsiConsole.MarkupLine($"[grey]- .NET Version:[/] {config.NetVersion}");
 
         // 3. Generate
         await AnsiConsole.Status()

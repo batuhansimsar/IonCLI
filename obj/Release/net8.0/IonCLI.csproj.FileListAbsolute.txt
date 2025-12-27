@@ -1,3 +1,9 @@
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.csproj.AssemblyReference.cache
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.AssemblyInfoInputs.cache
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.AssemblyInfo.cs
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.csproj.CoreCompileInputs.cache
+/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.sourcelink.json
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/IonCLI
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/IonCLI.deps.json
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/IonCLI.runtimeconfig.json
@@ -20,12 +26,6 @@
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/tr/System.CommandLine.resources.dll
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/zh-Hans/System.CommandLine.resources.dll
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/zh-Hant/System.CommandLine.resources.dll
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.csproj.AssemblyReference.cache
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.GeneratedMSBuildEditorConfig.editorconfig
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.AssemblyInfoInputs.cache
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.AssemblyInfo.cs
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.csproj.CoreCompileInputs.cache
-/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.sourcelink.json
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.csproj.CopyComplete
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/IonCLI.dll
 /Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/Release/net8.0/refint/IonCLI.dll

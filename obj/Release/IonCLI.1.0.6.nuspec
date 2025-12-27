@@ -2,16 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>IonCLI</id>
-    <version>1.0.0</version>
+    <version>1.0.6</version>
     <authors>IonCLI Team</authors>
     <license type="expression">MIT</license>
     <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <readme>README.md</readme>
     <description>A CLI tool for scaffolding Clean Architecture .NET WebAPI solutions.</description>
     <tags>dotnet-tool clean-architecture webapi scaffold cli</tags>
     <packageTypes>
       <packageType name="DotnetTool" />
     </packageTypes>
-    <repository type="git" url="https://github.com/yourusername/IonCLI" commit="7cc7adaaa21acda2bb3ed7d3b30676e5f049d246" />
+    <repository type="git" url="https://github.com/batuhansimsar/IonCLI" commit="1804e4cb3b8c5a81cbf2030928b832f537897568" />
   </metadata>
   <files>
     <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/obj/DotnetToolSettings.xml" target="tools/net8.0/any/DotnetToolSettings.xml" />
@@ -36,5 +37,6 @@
     <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/tr/System.CommandLine.resources.dll" target="tools/net8.0/any/tr/System.CommandLine.resources.dll" />
     <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/zh-Hans/System.CommandLine.resources.dll" target="tools/net8.0/any/zh-Hans/System.CommandLine.resources.dll" />
     <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/bin/Release/net8.0/publish/zh-Hant/System.CommandLine.resources.dll" target="tools/net8.0/any/zh-Hant/System.CommandLine.resources.dll" />
+    <file src="/Users/esrefbatuhansimsar/Desktop/ProjeGeliştirme/IonCLI/README.md" target="/README.md" />
   </files>
 </package>

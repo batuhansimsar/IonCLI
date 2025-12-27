@@ -6,12 +6,12 @@ namespace IonCLI.Services;
 
 public interface IInteractiveConsole
 {
-    ProjectConfig AskQuestions(string projectName, bool useDefaults = false, string? netVersion = null, DatabaseType? dbType = null, bool? useDocker = null);
+    ProjectConfig AskQuestions(string projectName, bool useDefaults = false, string? netVersion = null);
 }
 
 public class InteractiveConsole : IInteractiveConsole
 {
-    public ProjectConfig AskQuestions(string projectName, bool useDefaults = false, string? netVersion = null, DatabaseType? dbType = null, bool? useDocker = null)
+    public ProjectConfig AskQuestions(string projectName, bool useDefaults = false, string? netVersion = null)
     {
         AnsiConsole.Write(
             new FigletText("IonCLI")
@@ -22,20 +22,18 @@ public class InteractiveConsole : IInteractiveConsole
         { 
             Name = projectName,
             OutputPath = Path.Combine(Directory.GetCurrentDirectory(), projectName),
-            NetVersion = "net8.0" // Default/Placeholder
+            NetVersion = "net8.0"
         };
 
         if (useDefaults)
         {
             config.NetVersion = "net8.0";
-            config.Database = DatabaseType.PostgreSQL;
             config.UseAuth = false; 
-            config.UseDocker = true;
-            AnsiConsole.MarkupLine("[grey]Using default configuration: .NET 8.0, PostgreSQL, Docker[/]");
+            AnsiConsole.MarkupLine("[grey]Using default configuration: .NET 8.0[/]");
             return config;
         }
 
-        // 1. .NET Version
+        // .NET Version
         if (netVersion != null)
         {
              config.NetVersion = netVersion;
@@ -55,32 +53,7 @@ public class InteractiveConsole : IInteractiveConsole
                 _ => "net8.0"
             };
         }
-
-        // 2. Database
-        if (dbType.HasValue)
-        {
-            config.Database = dbType.Value;
-        }
-        else
-        {
-            config.Database = AnsiConsole.Prompt(
-                new SelectionPrompt<DatabaseType>()
-                    .Title("Select database:")
-                    .PageSize(4)
-                    .AddChoices(DatabaseType.SQLServer, DatabaseType.PostgreSQL, DatabaseType.SQLite, DatabaseType.None));
-        }
-
-        // 3. Docker Support
-        if (useDocker.HasValue)
-        {
-             config.UseDocker = useDocker.Value;
-        }
-        else
-        {
-             config.UseDocker = AnsiConsole.Confirm("Include Docker support?", defaultValue: false);
-        }
         
-        // Default Auth to false since we aren't asking (or true? lets go with false to be minimal as requested)
         config.UseAuth = false; 
 
         return config;

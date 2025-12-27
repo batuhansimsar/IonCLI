@@ -8,7 +8,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ion</ToolCommandName>
     <PackageId>IonCLI</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.6</Version>
     <Authors>IonCLI Team</Authors>
     <Company>IonCLI</Company>
     <Description>A CLI tool for scaffolding Clean Architecture .NET WebAPI solutions.</Description>
@@ -27,10 +27,15 @@
   <ItemGroup>
     <Compile Remove="Templates/**/*" />
     <Compile Remove="Test*/**/*" />
-    <Compile Remove="IonApp/**/*" />
-    <Compile Remove="RunApp/**/*" />
-    <Compile Remove="DockerApp/**/*" />
-    <Compile Remove="MyTestApp/**/*" />
+    <Compile Remove="IonApp*/**/*" />
+    <Compile Remove="RunApp*/**/*" />
+    <Compile Remove="Docker*/**/*" />
+    <Compile Remove="MyTestApp*/**/*" />
+    <EmbeddedResource Remove="Test*/**/*" />
+    <EmbeddedResource Remove="IonApp*/**/*" />
+    <EmbeddedResource Remove="RunApp*/**/*" />
+    <EmbeddedResource Remove="Docker*/**/*" />
+    <EmbeddedResource Remove="MyTestApp*/**/*" />
     <EmbeddedResource Include="Templates/**/*" />
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>

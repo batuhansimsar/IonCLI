@@ -1,67 +1,97 @@
-# IonCLI 🚀
+# IonCLI ⚡
 
-**IonCLI** is a powerful CLI tool for scaffolding modern .NET 8/9 WebAPI solutions that adhere to Clean Architecture principles.
+**IonCLI** is a minimal CLI tool for scaffolding .NET WebAPI solutions following Clean Architecture principles.
 
 ## 📦 Installation
 
-Install the tool globally using the standard .NET CLI command:
+Install globally via NuGet:
 
 ```bash
 dotnet tool install -g IonCLI
 ```
 
-To update to the latest version:
+Update to the latest version:
 
 ```bash
 dotnet tool update -g IonCLI
 ```
 
-## 🏁 Quick Start
+## 🚀 Quick Start
 
-After installation, run this command to verify it works:
-
-```bash
-ion --version
-```
-
-Then create your first project:
+Create a new project:
 
 ```bash
-ion new MyFirstApp
+ion new MyApp
 ```
 
-## 🚀 Detailed Usage
+With specific .NET version:
 
-You can use the `ion` command anywhere in your terminal.
-
-**Interactive Mode:**
 ```bash
-ion new <ProjectName>
+ion new MyApp --net net9.0
 ```
 
-**Example:**
+Use defaults (no prompts):
+
 ```bash
-ion new MyAwesomeApp
+ion new MyApp --defaults
 ```
 
-**Non-Interactive (Command flags):**
-```bash
-ion new QuickApp --defaults
-ion new CustomApp --net net9.0 --db SQLite --docker false
+## ✨ Features
+
+- **Clean Architecture** - Domain, Application, Infrastructure, and WebAPI layers
+- **.NET 8 & 9 Support** - Choose your target framework
+- **Minimal Setup** - No pre-configured database or Docker, you add what you need
+- **Interactive & Non-Interactive Modes** - Flexible project generation
+
+## 📁 Generated Project Structure
+
 ```
+MyApp/
+├── src/
+│   ├── MyApp.Domain/
+│   ├── MyApp.Application/
+│   ├── MyApp.Infrastructure/
+│   └── MyApp.WebAPI/
+├── tests/
+├── ARCHITECTURE.md
+└── .gitignore
+```
+
+## 🛠️ What's Included
+
+- **Domain Layer** - Entities and common base classes
+- **Application Layer** - Business logic and interfaces
+- **Infrastructure Layer** - Empty placeholder for your data access, external services, etc.
+- **WebAPI Layer** - ASP.NET Core Web API with Swagger
+
+## 💡 Philosophy
+
+IonCLI generates a **minimal, opinionated** Clean Architecture structure. You configure your own:
+- Database (EF Core, Dapper, MongoDB, etc.)
+- Authentication (JWT, OAuth, etc.)
+- Docker setup
+- Additional services
+
+This gives you complete control over your architecture.
 
 ## ❓ Troubleshooting
 
 **"Command not found: ion"**
-If you see this error after installation, it means the .NET tools folder is not in your system PATH.
 
-*   **Mac/Linux**: Add `export PATH="$PATH:$HOME/.dotnet/tools"` to your `.zshrc` or `.bash_profile`.
-*   **Windows**: The path `%USERPROFILE%\.dotnet\tools` is usually added automatically. If not, add it to your Environment Variables manually.
+The .NET tools folder is not in your PATH.
 
-## ✨ Features
-*   **Clean Architecture Scaffolding**
-*   **Dynamic Templates** (.NET 8/9, Postgres, MSSQL, SQLite)
-*   **Docker Support**
+- **macOS/Linux**: Add to `.zshrc` or `.bash_profile`:
+  ```bash
+  export PATH="$PATH:$HOME/.dotnet/tools"
+  ```
+- **Windows**: Add `%USERPROFILE%\.dotnet\tools` to your Environment Variables.
+
+Then restart your terminal.
+
+## 📝 License
+
+MIT
 
 ---
-*Developed by Eşref Batuhan Simsar*
+
+**Developed by Eşref Batuhan Simsar**
