@@ -8,7 +8,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ion</ToolCommandName>
     <PackageId>IonCLI</PackageId>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <Authors>IonCLI Team</Authors>
     <Company>IonCLI</Company>
     <Description>A CLI tool for scaffolding Clean Architecture .NET WebAPI solutions.</Description>

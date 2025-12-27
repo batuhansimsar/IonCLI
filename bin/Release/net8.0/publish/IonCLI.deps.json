@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "IonCLI/1.0.6": {
+      "IonCLI/1.0.7": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "10.0.1",
           "Spectre.Console": "0.54.0",
@@ -95,7 +95,7 @@
     }
   },
   "libraries": {
-    "IonCLI/1.0.6": {
+    "IonCLI/1.0.7": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
